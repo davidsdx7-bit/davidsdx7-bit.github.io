@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedíts | David - Designer & Editor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- Fundo com Iluminação Suave --- */
+        .background-blobs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            filter: blur(80px);
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+
+        .blob-1 { width: 400px; height: 400px; background: #ff9900; top: -100px; right: -50px; }
+        .blob-2 { width: 350px; height: 350px; background: #00d4ff; bottom: 10%; left: 15%; }
+        .blob-3 { width: 300px; height: 300px; background: #5e17eb; bottom: -50px; right: 20%; }
+
+        /* --- Ícones Flutuantes --- */
+        .floating-icons img {
+            position: absolute;
+            width: 80px;
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .icon-ai-1 { top: 15%; left: 10%; transform: rotate(-15deg); filter: blur(2px) !important; width: 100px !important; }
+        .icon-ps-1 { bottom: 35%; left: 5%; transform: rotate(10deg); filter: blur(1px) !important; }
+        
+        /* Ajuste do novo ícone DaVinci */
+        .icon-dv { bottom: 15%; left: 12%; transform: rotate(-5deg); width: 100px !important; }
+
+        .icon-ai-2 { top: 35%; right: 5%; transform: rotate(15deg); width: 150px !important; }
+        .icon-ps-2 { bottom: -5%; right: 10%; transform: rotate(-10deg); filter: blur(3px) !important; width: 140px !important; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+            50% { transform: translateY(-20px) rotate(var(--rot)); }
+        }
+
+        /* --- Card Glassmorphism --- */
+        .glass-card {
+            position: relative;
+            z-index: 10;
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            width: 90%;
+            max-width: 650px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            color: var(--text-color);
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background: #1a1a1a;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 250px;
+            padding: 14px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .social-icons a:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 480px) {
+            .name { font-size: 1.8rem; }
+            .glass-card { padding: 40px 20px; }
+            .icon-dv { width: 60px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="floating-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon-ai-1" style="--rot: -15deg;" alt="Ai">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon-ps-1" style="--rot: 10deg;" alt="Ps">
+        
+        <!-- ÍCONE DAVINCI CORRIGIDO ABAIXO -->
+        <img src="https://images.icon-icons.com/3053/PNG/512/davinci_resolve_macos_bigsur_icon_190261.png" class="icon-dv" style="--rot: -5deg;" alt="DaVinci">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon-ai-2" style="--rot: 15deg;" alt="Ai">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon-ps-2" style="--rot: -10deg;" alt="Ps">
+    </div>
+
+    <div class="glass-card">
+        <img src="https://mir-s3-cdn-cf.behance.net/user/230/1496871724423205.6a3b4a151875f.png" alt="Dedíts Profile" class="profile-pic">
+        
+        <h1 class="name">Dedíts | David</h1>
+        
+        <p class="subtitle">
+            <i class="fas fa-palette"></i> Designer Gráfico 
+            <span style="margin: 0 5px;">•</span> 
+            <i class="fas fa-video"></i> Editor de vídeo
+        </p>
+
+        <div class="button-container">
+            <a href="https://www.behance.net/davidsouza99" target="_blank" class="btn">Bēhance</a>
+            <a href="#" class="btn">Planos</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@dediits" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/deditiis" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@dedllts" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
