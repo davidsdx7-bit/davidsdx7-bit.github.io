@@ -35,7 +35,7 @@
             position: relative;
         }
 
-        /* --- Fundo com Iluminação Suave --- */
+        /* --- Fundo com Iluminação --- */
         .background-blobs {
             position: absolute;
             width: 100%;
@@ -66,10 +66,7 @@
 
         .icon-ai-1 { top: 15%; left: 10%; transform: rotate(-15deg); filter: blur(2px) !important; width: 100px !important; }
         .icon-ps-1 { bottom: 35%; left: 5%; transform: rotate(10deg); filter: blur(1px) !important; }
-        
-        /* Ajuste do novo ícone DaVinci */
         .icon-dv { bottom: 15%; left: 12%; transform: rotate(-5deg); width: 100px !important; }
-
         .icon-ai-2 { top: 35%; right: 5%; transform: rotate(15deg); width: 150px !important; }
         .icon-ps-2 { bottom: -5%; right: 10%; transform: rotate(-10deg); filter: blur(3px) !important; width: 140px !important; }
 
@@ -108,10 +105,11 @@
         .name {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             letter-spacing: -1px;
         }
 
+        /* AJUSTE DOS ÍCONES E TEXTO */
         .subtitle {
             font-size: 0.95rem;
             opacity: 0.9;
@@ -119,9 +117,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 12px; /* Espaço entre as duas categorias */
+            flex-wrap: wrap;
         }
 
+        .subtitle-group {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Espaço bem pequeno entre o ícone e o texto */
+        }
+
+        .subtitle-group i {
+            font-size: 0.85rem;
+        }
+
+        .dot-separator {
+            opacity: 0.5;
+        }
+
+        /* Botões */
         .button-container {
             display: flex;
             flex-direction: column;
@@ -170,8 +184,7 @@
 
         @media (max-width: 480px) {
             .name { font-size: 1.8rem; }
-            .glass-card { padding: 40px 20px; }
-            .icon-dv { width: 60px !important; }
+            .subtitle { gap: 8px; }
         }
     </style>
 </head>
@@ -186,10 +199,7 @@
     <div class="floating-icons">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon-ai-1" style="--rot: -15deg;" alt="Ai">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon-ps-1" style="--rot: 10deg;" alt="Ps">
-        
-        <!-- ÍCONE DAVINCI CORRIGIDO ABAIXO -->
         <img src="https://images.icon-icons.com/3053/PNG/512/davinci_resolve_macos_bigsur_icon_190261.png" class="icon-dv" style="--rot: -5deg;" alt="DaVinci">
-        
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon-ai-2" style="--rot: 15deg;" alt="Ai">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon-ps-2" style="--rot: -10deg;" alt="Ps">
     </div>
@@ -199,11 +209,16 @@
         
         <h1 class="name">Dedíts | David</h1>
         
-        <p class="subtitle">
-            <i class="fas fa-palette"></i> Designer Gráfico 
-            <span style="margin: 0 5px;">•</span> 
-            <i class="fas fa-video"></i> Editor de vídeo
-        </p>
+        <!-- SUBTITLE COM AGRUPAMENTOS AJUSTADOS -->
+        <div class="subtitle">
+            <span class="subtitle-group">
+                <i class="fas fa-palette"></i> Designer Gráfico
+            </span>
+            <span class="dot-separator">•</span>
+            <span class="subtitle-group">
+                <i class="fas fa-video"></i> Editor de vídeo
+            </span>
+        </div>
 
         <div class="button-container">
             <a href="https://www.behance.net/davidsouza99" target="_blank" class="btn">Bēhance</a>
