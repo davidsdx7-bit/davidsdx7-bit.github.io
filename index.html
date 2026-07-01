@@ -121,7 +121,6 @@
 
         .plans-title { font-size: 3.5rem; font-weight: 400; letter-spacing: 2px; }
 
-        /* Toggle Switch */
         .toggle-container { display: flex; align-items: center; gap: 15px; font-weight: 600; font-size: 1.2rem; }
         .switch {
             position: relative; display: inline-block; width: 70px; height: 34px;
@@ -141,7 +140,6 @@
         .toggle-label { opacity: 0.5; transition: 0.3s; }
         .toggle-label.active { opacity: 1; background: white; color: black; padding: 2px 10px; border-radius: 5px; }
 
-        /* Grid de Cards */
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -179,7 +177,6 @@
         }
         .btn-subscribe:hover { background: rgba(255,255,255,0.4); }
 
-        /* Footer Planos */
         .plans-footer { text-align: center; margin-top: 20px; }
         .plans-footer h3 { font-size: 2rem; font-weight: 400; margin-bottom: 20px; }
         .btn-whatsapp {
@@ -250,65 +247,69 @@
         </header>
 
         <div class="plans-grid">
+            <!-- Básico -->
             <div class="plan-card">
                 <h2 class="plan-name">Básico</h2>
                 <ul class="feature-list">
                     <li><span class="dot on"></span> Criativos para redes sociais</li>
                     <li><span class="dot off"></span> Personalizados</li>
                     <li><span class="dot off"></span> Impressão upscale</li>
-                    <li><span class="dot off"></span> Criativos prontos (Photoshop, CorelDraw, pdf)</li>
+                    <li><span class="dot off"></span> Criativos prontos</li>
                     <li><span class="dot off"></span> Vídeo com voz IA (1min)</li>
-                    <li><span class="dot off"></span> Vídeo com personagem IA (15s)</li>
-                    <li><span class="dot off"></span> Vídeo com personagem IA (30s)</li>
-                    <li><span class="dot off"></span> Edição de vídeo a partir de mídias</li>
+                    <li><span class="dot off"></span> Vídeo personagem IA (15s)</li>
+                    <li><span class="dot off"></span> Vídeo personagem IA (30s)</li>
+                    <li><span class="dot off"></span> Edição a partir de mídias</li>
                 </ul>
                 <div class="price-container">R$<span class="price-val" data-plan="basico">26,90</span></div>
                 <button onclick="subscribe('Básico')" class="btn-subscribe">Assinar</button>
             </div>
 
+            <!-- Padrão -->
             <div class="plan-card">
                 <h2 class="plan-name">Padrão</h2>
                 <ul class="feature-list">
                     <li><span class="dot on"></span> Criativos para redes sociais</li>
                     <li><span class="dot on"></span> Personalizados</li>
                     <li><span class="dot on"></span> Impressão upscale</li>
-                    <li><span class="dot on"></span> Criativos prontos (Photoshop, CorelDraw, pdf)</li>
+                    <li><span class="dot on"></span> Criativos prontos</li>
                     <li><span class="dot on"></span> Vídeo com voz IA (1min)</li>
                     <li><span class="dot off"></span> Vídeo personagem IA (15s)</li>
                     <li><span class="dot off"></span> Vídeo personagem IA (30s)</li>
-                    <li><span class="dot off"></span> Edição de vídeo a partir de mídias</li>
+                    <li><span class="dot off"></span> Edição a partir de mídias</li>
                 </ul>
                 <div class="price-container">R$<span class="price-val" data-plan="padrao">42,90</span></div>
                 <button onclick="subscribe('Padrão')" class="btn-subscribe">Assinar</button>
             </div>
 
+            <!-- Plus -->
             <div class="plan-card">
                 <h2 class="plan-name">Plus</h2>
                 <ul class="feature-list">
                     <li><span class="dot on"></span> Criativos para redes sociais</li>
                     <li><span class="dot on"></span> Personalizados</li>
                     <li><span class="dot on"></span> Impressão upscale</li>
-                    <li><span class="dot on"></span> Criativos prontos (Photoshop, CorelDraw, pdf)</li>
+                    <li><span class="dot on"></span> Criativos prontos</li>
                     <li><span class="dot on"></span> Vídeo com voz IA (1min)</li>
                     <li><span class="dot on"></span> Vídeo personagem IA (15s)</li>
                     <li><span class="dot off"></span> Vídeo personagem IA (30s)</li>
-                    <li><span class="dot off"></span> Edição de vídeo a partir de mídias</li>
+                    <li><span class="dot off"></span> Edição a partir de mídias</li>
                 </ul>
                 <div class="price-container">R$<span class="price-val" data-plan="plus">87,99</span></div>
                 <button onclick="subscribe('Plus')" class="btn-subscribe">Assinar</button>
             </div>
 
+            <!-- Pro -->
             <div class="plan-card">
                 <h2 class="plan-name">Pro</h2>
                 <ul class="feature-list">
                     <li><span class="dot on"></span> Criativos para redes sociais</li>
                     <li><span class="dot on"></span> Personalizados</li>
                     <li><span class="dot on"></span> Impressão upscale</li>
-                    <li><span class="dot on"></span> Criativos prontos (Photoshop, CorelDraw, pdf)</li>
+                    <li><span class="dot on"></span> Criativos prontos</li>
                     <li><span class="dot on"></span> Vídeo com voz IA (1min)</li>
                     <li><span class="dot on"></span> Vídeo personagem IA (15s)</li>
                     <li><span class="dot on"></span> Vídeo personagem IA (30s)</li>
-                    <li><span class="dot on"></span> Edição de vídeo a partir de mídias</li>
+                    <li><span class="dot on"></span> Edição a partir de mídias</li>
                 </ul>
                 <div class="price-container">R$<span class="price-val" data-plan="pro">274,90</span></div>
                 <button onclick="subscribe('Pro')" class="btn-subscribe">Assinar</button>
@@ -330,6 +331,22 @@
         const prices = {
             semanal: { basico: "12,90", padrao: "26,90", plus: "42,90", pro: "76,00" },
             mensal: { basico: "26,90", padrao: "42,90", plus: "87,99", pro: "274,90" }
+        };
+
+        // OBJETOS COM OS LINKS DO MERCADO PAGO
+        const subscriptionLinks = {
+            semanal: {
+                basico: "https://mpago.la/1Co7tt1",
+                padrao: "https://mpago.la/14MLMbM",
+                plus: "https://mpago.la/1y9Cd8Q",
+                pro: "https://mpago.la/2DDFfta"
+            },
+            mensal: {
+                basico: "https://mpago.la/1MA1Mbs",
+                padrao: "https://mpago.la/2RY9LYh",
+                plus: "https://mpago.la/1ThZQvZ",
+                pro: "https://mpago.la/12yTBDN"
+            }
         };
 
         function showPage(pageId) {
@@ -355,19 +372,21 @@
             });
         }
 
-        // CORREÇÃO DOS LINKS DE ASSINATURA
+        // FUNÇÃO DE ASSINATURA ATUALIZADA PARA MERCADO PAGO
         function subscribe(planName) {
             const isSemanal = document.getElementById('plan-toggle').checked;
-            const frequency = isSemanal ? "Semanal" : "Mensal";
+            const frequency = isSemanal ? "semanal" : "mensal";
             
-            // Tratamento para remover acentos para encontrar a chave correta no objeto
+            // Tratamento para remover acentos para encontrar a chave correta
             const planKey = planName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            const priceValue = isSemanal ? prices.semanal[planKey] : prices.mensal[planKey];
-
-            const message = `Olá, gostaria de assinar o Plano ${planName} ${frequency} (R$${priceValue}).`;
-            const whatsappUrl = `https://wa.me/559180555488?text=${encodeURIComponent(message)}`;
             
-            window.open(whatsappUrl, '_blank');
+            const checkoutUrl = subscriptionLinks[frequency][planKey];
+
+            if (checkoutUrl) {
+                window.open(checkoutUrl, '_blank');
+            } else {
+                console.error("Link não encontrado para o plano escolhido.");
+            }
         }
     </script>
 </body>
